@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Hotel And Flights | Where to Go, and Exactly When</title>
+<meta name="description" content="Four destinations, month by month. Hurricane risk, sargassum, dry seasons and where hotel rates drop 40 to 60%. Search flights and hotels together, once you know when to go.">
+<link rel="canonical" href="https://bookhotelandflights.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#10394A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Book Hotel And Flights">
+<meta property="og:title" content="Book Hotel And Flights | Where to Go, and Exactly When">
+<meta property="og:description" content="Four destinations, month by month. Hurricane risk, sargassum, dry seasons and where hotel rates drop 40 to 60%. Search flights and hotels together, once you know when to go.">
+<meta property="og:url" content="https://bookhotelandflights.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2310394A'/><path d='M4 20 L28 12 L25 18 L10 23 Z' fill='%23E8A33D'/><path d='M4 25 q7 -3 14 0 t10 0' stroke='%233F7D5C' stroke-width='2' fill='none'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://creator.expediagroup.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ocean:#10394A; --deep:#0A2733; --shell:#F8F5EF; --white:#fff;
+  --sun:#E8A33D; --palm:#3F7D5C; --clay:#C25A3E;
+  --grey:#6C7A80; --line:rgba(16,57,74,.15); --line-soft:rgba(16,57,74,.08);
+  --disp:'Manrope',system-ui,sans-serif;
+  --body:'Lora',Georgia,serif;
+  --mono:'Roboto Mono',monospace;
+  --wrap:1170px; --hdr:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--shell);color:var(--ocean);
+  font-family:var(--body);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:var(--ocean);text-underline-offset:3px}
+a:hover{color:var(--clay)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.14;letter-spacing:-.03em;margin:0 0 .5em}
+h1{font-size:clamp(2.3rem,5.4vw,3.9rem);letter-spacing:-.042em}
+h2{font-size:clamp(1.7rem,3.2vw,2.45rem);margin-top:0}
+h3{font-size:clamp(1.15rem,2vw,1.4rem);font-weight:700}
+h4{font-size:1.02rem;font-weight:700}
+p{margin:0 0 1.1em}
+.lede{font-size:clamp(1.06rem,1.85vw,1.26rem);line-height:1.6}
+.eyebrow{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--clay);display:block;margin-bottom:.9em}
+.eyebrow.on-dark{color:var(--sun)}
+
+.util{background:var(--deep);color:var(--shell);font-family:var(--mono);font-size:.6rem;letter-spacing:.08em}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:34px;flex-wrap:wrap}
+.util a{color:var(--sun);text-decoration:none}
+.util a:hover{text-decoration:underline}
+.hdr{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ocean);flex-shrink:0}
+.brand svg{display:block;width:38px;height:38px;flex-shrink:0}
+.brand-tx{font-family:var(--disp);font-weight:800;font-size:1.04rem;letter-spacing:-.04em;line-height:1.05}
+.brand-tx span{display:block;font-family:var(--mono);font-size:.49rem;font-weight:400;letter-spacing:.15em;
+  color:var(--grey);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;gap:15px;align-items:center;white-space:nowrap}
+.nav a{font-family:var(--disp);font-weight:700;font-size:.85rem;text-decoration:none;color:var(--ocean);white-space:nowrap}
+.nav a:hover,.nav a[aria-current]{color:var(--clay)}
+.hdr-right{display:flex;align-items:center;gap:11px}
+.navaff{font-family:var(--disp);font-weight:700;font-size:.8rem;text-decoration:none;color:var(--ocean);
+  border:1px solid var(--line);padding:9px 12px;border-radius:3px;white-space:nowrap}
+.navaff:hover{background:var(--ocean);color:var(--white);border-color:var(--ocean)}
+.btn{display:inline-block;font-family:var(--disp);font-weight:800;font-size:.88rem;background:var(--ocean);
+  color:var(--white);padding:11px 19px;border-radius:3px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--clay);color:var(--white)}
+.btn-sun{background:var(--sun);color:var(--deep)}
+.btn-sun:hover{background:var(--deep);color:var(--sun)}
+.burger{display:none;background:none;border:1px solid var(--line);width:44px;height:40px;cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;border-radius:3px}
+.burger span{display:block;width:19px;height:2px;background:var(--ocean)}
+.mobnav{display:none;position:fixed;left:0;right:0;top:var(--hdr);bottom:0;z-index:55;background:var(--white);
+  overflow-y:auto;padding:24px 24px 60px}
+.mobnav.open{display:block}
+.mobnav a{display:block;font-family:var(--disp);font-weight:700;font-size:1.14rem;padding:14px 0;
+  border-bottom:1px solid var(--line-soft);text-decoration:none;color:var(--ocean)}
+.mobnav .mob-cta{background:var(--sun);color:var(--deep);text-align:center;border-radius:3px;
+  margin-top:16px;border-bottom:none}
+
+.aistrip{background:var(--deep);color:var(--shell);padding:20px 0}
+.aistrip .wrap{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.aistrip .tag{font-family:var(--mono);font-size:.56rem;letter-spacing:.17em;color:var(--sun);
+  text-transform:uppercase;padding-top:5px;flex-shrink:0}
+.aistrip p{margin:0;font-size:1rem;line-height:1.6;flex:1;min-width:260px}
+
+.wgwrap{background:var(--deep);padding:34px 0 40px}
+.wgwrap.light{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wg{max-width:var(--wrap);margin:0 auto;padding:0 24px;text-align:center}
+.wg-label{display:block;font-family:var(--mono);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sun);margin-bottom:12px}
+.wgwrap.light .wg-label{color:var(--clay)}
+.wg-h{font-size:clamp(1.35rem,2.7vw,1.95rem);color:var(--white);margin-bottom:.6em}
+.wgwrap.light .wg-h{color:var(--ocean)}
+.wg .eg-widget{margin:0 auto;max-width:960px;text-align:left;min-height:190px}
+@media(max-width:768px){.wg .eg-widget{min-height:340px}}
+.wg-note{font-family:var(--mono);font-size:.61rem;letter-spacing:.05em;color:rgba(255,255,255,.64);
+  margin:16px auto 0;max-width:70ch;line-height:1.75}
+.wgwrap.light .wg-note{color:var(--grey)}
+.wg-note a{color:var(--sun)}
+.wgwrap.light .wg-note a{color:var(--clay)}
+
+section{padding:58px 0}
+.band{background:var(--deep);color:var(--shell)}
+.band h2,.band h3,.band h4{color:var(--white)}
+.band a{color:var(--sun)}
+.band a.btn{color:var(--white)}
+.band a.btn-sun{color:var(--deep)}
+.band-soft{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.narrow{max-width:68ch}
+
+.answer{border-left:4px solid var(--sun);background:var(--white);padding:20px 24px;margin:0 0 28px;font-size:1.02rem}
+.band .answer{background:rgba(255,255,255,.06)}
+.answer p:last-child{margin-bottom:0}
+.answer .q{font-family:var(--disp);font-weight:800;font-size:1.06rem;display:block;margin-bottom:.45em;letter-spacing:-.028em}
+
+table.data{width:100%;border-collapse:collapse;font-size:.93rem;margin:0 0 12px}
+table.data caption{text-align:left;font-family:var(--mono);font-size:.57rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--clay);padding-bottom:11px}
+table.data th{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;
+  text-align:left;border-bottom:2px solid var(--ocean);padding:9px 12px 9px 0;font-weight:400;color:var(--grey)}
+table.data td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table.data td.fig{font-family:var(--mono);font-size:.83rem;font-weight:500;white-space:nowrap}
+.band table.data caption{color:var(--sun)}
+.band table.data th{color:var(--sun);border-bottom-color:var(--sun)}
+.band table.data td{border-bottom-color:rgba(255,255,255,.14)}
+
+.card{background:var(--white);border:1px solid var(--line);padding:24px}
+.band .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.16)}
+.card .kv{font-family:var(--mono);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--clay);display:block;margin-bottom:.7em}
+.band .card .kv{color:var(--sun)}
+.card p:last-child{margin-bottom:0}
+.card.win{border-top:4px solid var(--palm)}
+.card.lose{border-top:4px solid var(--clay)}
+
+.src{font-family:var(--mono);font-size:.57rem;letter-spacing:.05em;color:var(--grey);display:block;margin-top:10px;line-height:1.75}
+.band .src{color:rgba(255,255,255,.6)}
+
+/* ---------- seasonality matrix ---------- */
+.matrix{overflow-x:auto;margin-top:24px;-webkit-overflow-scrolling:touch;max-width:100%}
+.tscroll{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+.tscroll table.data{min-width:520px}
+table.mx{border-collapse:separate;border-spacing:3px;font-family:var(--mono);font-size:.58rem;min-width:640px;width:100%}
+table.mx th{font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);
+  padding:6px 4px;font-size:.53rem;text-align:center}
+table.mx th.rowh{text-align:left;padding-right:12px;color:#fff;font-family:var(--disp);
+  font-weight:700;font-size:.78rem;letter-spacing:-.01em;text-transform:none;white-space:nowrap}
+table.mx td{padding:0}
+.mcell{display:block;height:38px;border-radius:3px;position:relative;cursor:default;
+  display:flex;align-items:center;justify-content:center;font-size:.5rem;letter-spacing:.06em;color:rgba(0,0,0,.62)}
+.m-best{background:#5FA57E}
+.m-good{background:#9BC49F}
+.m-ok{background:#E8CF7A}
+.m-risk{background:#E0925F}
+.m-avoid{background:#C96B4E;color:rgba(255,255,255,.85)}
+.mx-key{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-family:var(--mono);
+  font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.mx-key span{display:flex;align-items:center;gap:7px}
+.mx-key i{width:16px;height:12px;border-radius:2px;display:block}
+.mx-scroll{font-family:var(--mono);font-size:.53rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-top:10px}
+
+/* destination cards */
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+.dcard{background:var(--white);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column}
+.dcard .kv{font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:.6em}
+.dcard h3{margin-bottom:.35em}
+.dcard .dmeta{font-family:var(--mono);font-size:.62rem;color:var(--grey);margin-bottom:.9em;letter-spacing:.03em}
+.dcard p{font-size:.95rem;flex:1}
+.dcard .dv{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 9px;border-radius:2px;display:inline-block;margin-top:14px;align-self:flex-start}
+.dv-yes{background:rgba(63,125,92,.16);color:#2E5C43}
+.dv-mix{background:rgba(232,163,61,.2);color:#8A5A10}
+.dv-no{background:rgba(194,90,62,.16);color:#8E3E27}
+
+details{border-bottom:1px solid var(--line);padding:0}
+details summary{cursor:pointer;padding:18px 40px 18px 0;position:relative;list-style:none;
+  font-family:var(--disp);font-weight:700;font-size:1.02rem;letter-spacing:-.02em}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:1.2rem;color:var(--clay)}
+details[open] summary::after{content:"\2212"}
+details .ans{padding:0 40px 20px 0}
+details .ans p:last-child{margin-bottom:0}
+
+.bnwrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.bnwrap .eg-affiliate-banners{display:block;margin:0 auto;overflow:hidden}
+.bn-medium-rectangle .eg-affiliate-banners{width:300px;height:250px}
+.bn-wide-skyscraper .eg-affiliate-banners{width:160px;height:600px}
+.bn-label{font-family:var(--mono);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.band .bn-label{color:rgba(255,255,255,.6)}
+.bn-note{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;color:var(--grey);
+  margin:0;text-align:center;max-width:34ch;line-height:1.7}
+.bnrow{padding:34px 0;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media(max-width:1024px){.bn-wide-skyscraper{display:none}}
+
+footer{background:var(--deep);color:var(--shell);padding:56px 0 30px;font-size:.88rem}
+footer h4{font-family:var(--mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:400;color:var(--sun);margin-bottom:1.1em}
+footer a{color:var(--shell);text-decoration:none}
+footer a:hover{color:var(--sun);text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:9px;line-height:1.4}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:34px;margin-bottom:40px}
+.fbase{border-top:1px solid rgba(255,255,255,.16);padding-top:24px;display:flex;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.57rem;letter-spacing:.08em}
+.disclose{font-family:var(--mono);font-size:.55rem;letter-spacing:.04em;color:rgba(255,255,255,.58);
+  margin-top:18px;line-height:1.75;max-width:82ch}
+
+@media(max-width:1180px){.nav{display:none}.hdr-right{display:none}.burger{display:flex}}
+@media(max-width:768px){body{font-size:17px}section{padding:44px 0}}
+@media(max-width:430px){.wrap{padding:0 17px}.wg{padding:0 14px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+</style>
+
+</head>
+<body>
+<div class="util">
+  <div class="wrap">
+    <span>FLIGHT + HOTEL, BOOKED TOGETHER &nbsp;/&nbsp; SEARCH POWERED BY EXPEDIA</span>
+    <span><a href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">GO TO EXPEDIA &rarr;</a></span>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Book Hotel And Flights home">
+      <svg viewBox="0 0 48 48" role="img" aria-label="Book Hotel And Flights">
+        <rect width="48" height="48" rx="5" fill="#10394A"/>
+        <path d="M6 29 L42 17 L37 26 L15 33 Z" fill="#E8A33D"/>
+        <path d="M6 38 q10 -4 20 0 t16 0" stroke="#3F7D5C" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-tx">Book Hotel And Flights<span>Where to go, and when</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/cancun-flight-and-hotel/">Cancún</a>
+      <a href="/punta-cana-flight-and-hotel/">Punta Cana</a>
+      <a href="/hawaii-flight-and-hotel/">Hawaii</a>
+      <a href="/costa-rica-flight-and-hotel/">Costa Rica</a>
+    </nav>
+    <div class="hdr-right">
+      <a class="navaff" href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Expedia<span> &#8599;</span></a>
+      <a class="btn btn-sun" href="#search">Search</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobnav" id="mobnav">
+  <a href="/" aria-current="page">Home</a>
+  <a href="/cancun-flight-and-hotel/">Cancún &amp; Riviera Maya</a>
+  <a href="/punta-cana-flight-and-hotel/">Punta Cana</a>
+  <a href="/hawaii-flight-and-hotel/">Hawaii</a>
+  <a href="/costa-rica-flight-and-hotel/">Costa Rica</a>
+  <a href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Go to Expedia &#8599;</a>
+  <a class="mob-cta" href="#search">Search flights + hotels</a>
+</div>
+
+<div class="aistrip">
+  <div class="wrap">
+    <span class="tag">Short answer</span>
+    <p>The month you travel matters more than the site you book on. Canc&uacute;n and Punta Cana are cheapest from June to October because that is Atlantic hurricane season &mdash; Canc&uacute;n hotel rates fall 40 to 60% and Punta Cana's fall 30 to 50%. Costa Rica's dry season runs December to April on the Pacific side, and Hawaii has no wet season worth planning around but two distinct price peaks. Pick the month first, then search. The four destination pages here cover each in detail.</p>
+  </div>
+</div>
+<section style="padding:46px 0 24px">
+  <div class="wrap">
+    <span class="eyebrow">Flights and hotels, by destination</span>
+    <h1 style="max-width:19ch">The month matters more than the website.</h1>
+    <p class="lede narrow">Every booking site sells you the same four destinations. None of them tell you that two of the four are cheapest precisely because that is when the weather is worst, or that a seaweed season nobody mentions can ruin the beach you paid for.</p>
+  </div>
+</section>
+<div id="search"></div>
+<div class="wgwrap">
+  <div class="wg">
+    <span class="wg-label">Search flights + hotels together</span><h2 class="wg-h">Once you have picked the month.</h2>
+    <div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays,flights"
+         data-network="pz" data-camref="1100l5QSrc" data-pubref="bhf-home-hero"></div>
+    <p class="wg-note">Powered by Expedia. We may earn a commission on qualifying bookings, at no extra cost to you.</p>
+  </div>
+</div>
+<section class="band" id="matrix">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Twelve months, four destinations</span>
+    <h2>Green is go. Orange is cheap for a reason.</h2>
+    <p class="lede narrow">Built from published seasonal patterns rather than a pricing study. It shows you where value and risk sit in the same month, which is the trade every beach holiday actually turns on.</p>
+
+    <div class="matrix"><table class="mx"><caption class="sr-only">Month by month conditions for four destinations</caption><thead><tr><th class="rowh"></th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr></thead><tbody><tr><th class="rowh">Cancún</th><td><span class="mcell m-best" title="Cancún: Jan">dry</span></td><td><span class="mcell m-best" title="Cancún: Feb">dry</span></td><td><span class="mcell m-good" title="Cancún: Mar">spring</span></td><td><span class="mcell m-good" title="Cancún: Apr">warm</span></td><td><span class="mcell m-ok" title="Cancún: May">sarg</span></td><td><span class="mcell m-risk" title="Cancún: Jun">sarg</span></td><td><span class="mcell m-risk" title="Cancún: Jul">hot</span></td><td><span class="mcell m-risk" title="Cancún: Aug">peak</span></td><td><span class="mcell m-avoid" title="Cancún: Sep">peak</span></td><td><span class="mcell m-risk" title="Cancún: Oct">late</span></td><td><span class="mcell m-best" title="Cancún: Nov">dry</span></td><td><span class="mcell m-good" title="Cancún: Dec">hols</span></td></tr><tr><th class="rowh">Punta Cana</th><td><span class="mcell m-best" title="Punta Cana: Jan">dry</span></td><td><span class="mcell m-best" title="Punta Cana: Feb">whale</span></td><td><span class="mcell m-best" title="Punta Cana: Mar">whale</span></td><td><span class="mcell m-best" title="Punta Cana: Apr">dry</span></td><td><span class="mcell m-ok" title="Punta Cana: May">wet</span></td><td><span class="mcell m-ok" title="Punta Cana: Jun">wet</span></td><td><span class="mcell m-risk" title="Punta Cana: Jul">hurr</span></td><td><span class="mcell m-risk" title="Punta Cana: Aug">hurr</span></td><td><span class="mcell m-avoid" title="Punta Cana: Sep">peak</span></td><td><span class="mcell m-risk" title="Punta Cana: Oct">hurr</span></td><td><span class="mcell m-good" title="Punta Cana: Nov">shldr</span></td><td><span class="mcell m-good" title="Punta Cana: Dec">hols</span></td></tr><tr><th class="rowh">Hawaii</th><td><span class="mcell m-ok" title="Hawaii: Jan">peak</span></td><td><span class="mcell m-good" title="Hawaii: Feb">whale</span></td><td><span class="mcell m-good" title="Hawaii: Mar">whale</span></td><td><span class="mcell m-best" title="Hawaii: Apr">value</span></td><td><span class="mcell m-best" title="Hawaii: May">value</span></td><td><span class="mcell m-ok" title="Hawaii: Jun">summer</span></td><td><span class="mcell m-risk" title="Hawaii: Jul">peak</span></td><td><span class="mcell m-risk" title="Hawaii: Aug">peak</span></td><td><span class="mcell m-best" title="Hawaii: Sep">value</span></td><td><span class="mcell m-best" title="Hawaii: Oct">value</span></td><td><span class="mcell m-good" title="Hawaii: Nov">value</span></td><td><span class="mcell m-avoid" title="Hawaii: Dec">hols</span></td></tr><tr><th class="rowh">Costa Rica</th><td><span class="mcell m-best" title="Costa Rica: Jan">dry</span></td><td><span class="mcell m-best" title="Costa Rica: Feb">dry</span></td><td><span class="mcell m-best" title="Costa Rica: Mar">dry</span></td><td><span class="mcell m-good" title="Costa Rica: Apr">dry</span></td><td><span class="mcell m-good" title="Costa Rica: May">green</span></td><td><span class="mcell m-good" title="Costa Rica: Jun">green</span></td><td><span class="mcell m-ok" title="Costa Rica: Jul">veran</span></td><td><span class="mcell m-ok" title="Costa Rica: Aug">green</span></td><td><span class="mcell m-avoid" title="Costa Rica: Sep">wet</span></td><td><span class="mcell m-avoid" title="Costa Rica: Oct">wet</span></td><td><span class="mcell m-good" title="Costa Rica: Nov">green</span></td><td><span class="mcell m-good" title="Costa Rica: Dec">hols</span></td></tr></tbody></table></div>
+    <div class="mx-key">
+      <span><i class="m-best"></i>Best window</span>
+      <span><i class="m-good"></i>Good</span>
+      <span><i class="m-ok"></i>Mixed</span>
+      <span><i class="m-risk"></i>Cheap, with a catch</span>
+      <span><i class="m-avoid"></i>Hardest month</span>
+    </div>
+    <p class="mx-scroll">Scroll the table sideways on a phone</p>
+    <p class="src">Derived from published seasonal guidance: Atlantic hurricane season dates from the National Hurricane Center calendar; Canc&uacute;n sargassum and weather patterns from 2026 month-by-month guides; Punta Cana high and low season from regional guidance; Costa Rica dry and green season conventions; Hawaii pricing seasonality from published travel guidance. These describe typical years, not forecasts for yours.</p>
+
+    <div class="answer" style="margin-top:32px">
+      <span class="q">What is the cheapest month for a Caribbean beach holiday?</span>
+      <p>September, and it is cheapest for a specific reason: it is the statistical peak of Atlantic hurricane season, which runs 1 June to 30 November with the basin peaking around 10 September. Canc&uacute;n hotel rates drop 40 to 60% in that window and Punta Cana's drop 30 to 50%. October is the more sensible version of the same trade &mdash; hurricane probability falls while pricing stays at low-season levels.</p>
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <div class="wrap">
+    <span class="eyebrow">Four destinations</span>
+    <h2>Three where bundling wins. One where it does not.</h2>
+    <p class="lede narrow">We earn a commission when you book a package. One of these four pages tells you to book the flight and hotel separately instead, because at that destination it is the right answer.</p>
+
+    <div class="dgrid">
+      <div class="dcard"><span class="kv">CUN</span><h3><a href="/cancun-flight-and-hotel/">Cancún &amp; Riviera Maya</a></h3><p class="dmeta">Mexico &middot; Caribbean coast &middot; ~4 h from Denver</p><p>The largest package destination in the Americas, and the one where the calendar matters most. Two separate seasonal problems overlap in summer: Atlantic hurricane season and sargassum seaweed, which package sellers never mention. Get the month right and it is the strongest value on this page.</p><span class="dv dv-yes">Packages usually win</span></div>
+      <div class="dcard"><span class="kv">PUJ</span><h3><a href="/punta-cana-flight-and-hotel/">Punta Cana</a></h3><p class="dmeta">Dominican Republic &middot; ~5.5 h from Denver</p><p>All-inclusive density is higher here than almost anywhere, which is exactly the condition under which bundling beats booking separately. Less hurricane-exposed than much of the Caribbean, with a dry season running December to April and rates falling 30 to 50% outside it.</p><span class="dv dv-yes">Packages usually win</span></div>
+      <div class="dcard"><span class="kv">HNL / OGG / KOA / LIH</span><h3><a href="/hawaii-flight-and-hotel/">Hawaii</a></h3><p class="dmeta">United States &middot; ~7 h from Denver</p><p>Long flights and expensive rooms, which is the combination bundling handles best. No wet season worth planning around, but two distinct price peaks and four main islands that are genuinely different trips. Resort fees are widespread and belong in every comparison.</p><span class="dv dv-yes">Packages usually win</span></div>
+      <div class="dcard"><span class="kv">SJO / LIR</span><h3><a href="/costa-rica-flight-and-hotel/">Costa Rica</a></h3><p class="dmeta">Central America &middot; ~5 h from Denver</p><p>The honest exception on this page. Independent lodges, small hotels and boutique properties dominate, most sit outside package inventory, and moving around the country is half the point. A package can work for a Guanacaste resort week &mdash; for anything else, book the two halves separately.</p><span class="dv dv-mix">Usually book separately</span></div>
+    </div>
+  </div>
+</section>
+<div class="bnrow"><div class="wrap"><div class="bnwrap bn-medium-rectangle"><span class="bn-label">Advertisement</span><div class="eg-affiliate-banners" data-program="us-expedia" data-network="pz" data-layout="medium-rectangle" data-image="sailing" data-message="bye-bye-bucket-list-hello-adventure" data-camref="1100l5QSrc" data-pubref="bhf-home-rect" data-link="packages"></div><p class="bn-note">Links to Expedia vacation packages. We may earn a commission on qualifying bookings.</p></div></div></div>
+<section class="band-soft" id="hurricane">
+  <div class="wrap">
+    <span class="eyebrow">The trade nobody explains properly</span>
+    <h2>Why the cheap months are cheap.</h2>
+
+    <div class="answer">
+      <span class="q">When is Atlantic hurricane season?</span>
+      <p>1 June to 30 November. Peak risk falls mid-August through mid-October, with the Atlantic basin peaking around 10 September. June and late November are quiet despite technically being inside the season. The National Hurricane Center begins issuing daily Tropical Weather Outlooks from mid-May each year, which is the point at which watching conditions becomes useful rather than theoretical.</p>
+    </div>
+
+    <div class="cols2">
+      <div>
+        <p>Resort pricing in the Caribbean and on Mexico's Caribbean coast is not complicated. Rates collapse in the months when a storm might arrive and recover in the months when one will not. The 40 to 60% discount at Canc&uacute;n and the 30 to 50% discount at Punta Cana are not promotions. They are a risk premium, paid to you, for accepting a probability.</p>
+        <p>The honest way to think about it is that you are being paid to take a bet. Most people who take that bet win it. The great majority of hurricane-season days at these destinations are indistinguishable from any other day, and the discount is entirely real.</p>
+        <p>But the bet has a shape worth understanding. What is far more common than a direct hit is <em>disruption</em>: a cancelled or delayed flight, a couple of storm days indoors, an excursion called off, an anxious week watching a forecast. Those outcomes are not rare, and they are what the discount is actually pricing.</p>
+      </div>
+      <div>
+        <h3>What the 2026 forecasts said</h3>
+        <p>Early-season forecasts from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico's national meteorological service converged on <strong>11 to 15 named storms and 4 to 7 hurricanes</strong>, against 30-year averages of 14 and 7. That is a near-normal to slightly-below-normal season.</p>
+        <p>Treat that with the caution it deserves. A seasonal forecast describes probability across an entire ocean basin over six months. It says almost nothing about whether your particular week at your particular resort will be affected, and a quiet season can still contain the one storm that lands where you are.</p>
+        <h3 style="margin-top:26px">If you take the trade</h3>
+        <p><strong>Book refundable where you can.</strong> In this window the flexibility is worth more than the small premium, and it is the one thing a package frequently removes.</p>
+        <p><strong>Read the insurance terms properly.</strong> Many policies exclude storms already named when you buy, so buying cover after a system forms is usually too late.</p>
+        <p><strong>Prefer October to September.</strong> Same low-season pricing, materially lower probability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sargassum">
+  <div class="wrap">
+    <span class="eyebrow">The other seasonal problem</span>
+    <h2>Nobody selling you a beach holiday mentions the seaweed.</h2>
+
+    <div class="answer">
+      <span class="q">Does sargassum affect Canc&uacute;n and the Riviera Maya?</span>
+      <p>Yes, seasonally, and it is the single most under-disclosed factor in Caribbean beach travel. Sargassum is a brown seaweed that washes ashore in large quantities, most heavily on Mexico's Caribbean coast. Levels are typically lowest from December through March and heaviest from roughly May through September. Beachfront resorts clear their beaches daily, but the water itself can still be affected, and Cozumel is largely protected.</p>
+    </div>
+
+    <div class="cols2">
+      <div>
+        <p>Here is why this belongs on a booking site rather than only on a weather site. Sargassum season overlaps almost exactly with hurricane season, which means the cheap months carry <strong>two</strong> risks rather than one &mdash; and only one of them ever gets discussed.</p>
+        <p>A traveller who books Canc&uacute;n in July because the rate looked extraordinary has usually reasoned about storms. Very few have reasoned about arriving at a beach that is being cleared with machinery each morning and water that is not the colour in the photographs.</p>
+        <p>It is also the more likely of the two to affect you. A hurricane in your week is unlikely. Heavy sargassum in July is closer to normal.</p>
+      </div>
+      <div>
+        <h3>What to do about it</h3>
+        <p><strong>Travel December to March if the beach is the point.</strong> That window has the lowest sargassum, the driest weather and no hurricane risk. It is also the most expensive, which is not a coincidence.</p>
+        <p><strong>Check current conditions before you commit.</strong> Sargassum arrival varies a great deal year to year and beach to beach, and monitoring services publish current conditions by beach.</p>
+        <p><strong>Consider Cozumel or the west-facing coasts.</strong> Cozumel is largely protected, which is why it appears repeatedly in guidance about the affected months.</p>
+        <p><strong>Note that Punta Cana is generally less affected</strong> than Mexico's Caribbean coast, which is one of several reasons it holds up better in summer.</p>
+        <p class="src">Sargassum arrival varies substantially year to year and cannot be forecast far ahead. Check current beach conditions close to travel rather than relying on seasonal averages.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="airports">
+  <div class="wrap">
+    <span class="eyebrow">Getting there</span>
+    <h2>Airports, flight times and the transfers nobody budgets for.</h2>
+    <p class="lede narrow">The airport you fly into changes the trip more than most people expect, and at two of these destinations picking the wrong one costs a day.</p>
+
+    <div class="tscroll" style="margin-top:26px"><table class="data">
+      <caption>Airports and approximate flight times</caption>
+      <thead><tr><th>Destination</th><th>Airport</th><th>From Denver</th><th>From New York</th><th>Transfer note</th></tr></thead>
+      <tbody>
+        <tr><td>Canc&uacute;n &amp; Riviera Maya</td><td class="fig">CUN</td><td class="fig">~4 h</td><td class="fig">~4 h</td><td>Playa del Carmen and Tulum are 1&ndash;2 h further by road</td></tr>
+        <tr><td>Punta Cana</td><td class="fig">PUJ</td><td class="fig">~5.5 h</td><td class="fig">~4 h</td><td>Most resorts 20&ndash;40 min; transfers often excluded</td></tr>
+        <tr><td>Costa Rica, Pacific beaches</td><td class="fig">LIR</td><td class="fig">~5 h</td><td class="fig">~5 h</td><td>Liberia is far closer to Guanacaste than San Jos&eacute;</td></tr>
+        <tr><td>Costa Rica, capital and interior</td><td class="fig">SJO</td><td class="fig">~5 h</td><td class="fig">~5.5 h</td><td>4&ndash;5 h by road to the northern Pacific beaches</td></tr>
+        <tr><td>Hawaii, Oahu</td><td class="fig">HNL</td><td class="fig">~7 h</td><td class="fig">~10 h</td><td>Best connected; most inter-island flights route here</td></tr>
+        <tr><td>Hawaii, Maui</td><td class="fig">OGG</td><td class="fig">~7 h</td><td class="fig">~10.5 h</td><td>Direct from several mainland cities</td></tr>
+        <tr><td>Hawaii, Big Island</td><td class="fig">KOA</td><td class="fig">~7 h</td><td class="fig">~10.5 h</td><td>Kona side; Hilo is a separate airport 2 h away</td></tr>
+        <tr><td>Hawaii, Kauai</td><td class="fig">LIH</td><td class="fig">~7.5 h</td><td class="fig">~11 h</td><td>Fewest direct mainland options</td></tr>
+      </tbody>
+    </table></div>
+    <p class="src">Flight times are approximate non-stop durations and vary by carrier, routing, season and winds. Connecting itineraries take substantially longer. Check the actual schedule for your dates.</p>
+
+    <div class="cols2" style="margin-top:30px">
+      <div>
+        <h3>The two that catch people out</h3>
+        <p><strong>Costa Rica: San Jos&eacute; or Liberia.</strong> This is the single most consequential airport decision on the page. SJO is the capital and has more flights; LIR sits in Guanacaste, right beside the Pacific beaches most visitors are heading for. Flying into San Jos&eacute; for a Guanacaste beach week means four to five hours in a car each way, which is close to a lost day at both ends.</p>
+        <p>If your trip is beaches only, fly LIR. If it includes the interior, the cloud forest or the Caribbean side, SJO usually makes more sense. Some itineraries are best served flying into one and out of the other, which packages generally cannot accommodate &mdash; another reason Costa Rica bundles poorly.</p>
+      </div>
+      <div>
+        <h3>Hawaii: the island is the decision</h3>
+        <p>The four main islands are genuinely different trips, and getting this wrong is expensive because correcting it means an additional inter-island flight rather than a taxi.</p>
+        <p>Oahu has the most infrastructure, the lowest prices and Waikiki. Maui is the classic resort island. The Big Island is the largest and most varied, with volcanic landscape and long drives. Kauai is the quietest and greenest, with the fewest direct flights.</p>
+        <p>A package that prices attractively into the wrong island is not a saving. Decide the island first, then price the flight to that specific airport.</p>
+        <p><a href="https://bestbeacheshawaii.com/">Our Hawaii beach guide</a> covers the islands in more detail.</p>
+      </div>
+    </div>
+
+    <div class="answer" style="margin-top:30px">
+      <span class="q">Should I fly into San Jos&eacute; or Liberia for Costa Rica?</span>
+      <p>Liberia (LIR) if you are heading for the Guanacaste beaches on the northern Pacific coast, because it is close to them. San Jos&eacute; (SJO) if your trip includes the capital, the cloud forest, Arenal or the Caribbean side. Flying into San Jos&eacute; for a beach week means roughly four to five hours of driving in each direction, which is close to a full day of a week-long trip spent in a car.</p>
+    </div>
+  </div>
+</section>
+<div class="wgwrap light">
+  <div class="wg">
+    <span class="wg-label">Flights only</span><h2 class="wg-h">Pricing the flight on its own?</h2>
+    <div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="flights"
+         data-network="pz" data-camref="1100l5QSrc" data-pubref="bhf-home-flights"></div>
+    <p class="wg-note">Worth doing before you bundle. <a href="https://flighthotelpackage.com/">The bundle calculator</a> compares the two.</p>
+  </div>
+</div>
+<section class="band" id="bundling">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Should you bundle at these destinations?</span>
+    <h2>Three yes, one no, and the reasoning is the same each time.</h2>
+    <p class="lede narrow">Bundling saves money when accommodation is the larger share of the trip, when you are staying several nights, and when the seller actually holds discounted inventory at the property you want. Those conditions hold at three of these four.</p>
+
+    <div class="tscroll" style="margin-top:26px"><table class="data">
+      <caption>Destination versus bundling</caption>
+      <thead><tr><th>Destination</th><th>Hotel share of cost</th><th>Package inventory</th><th>Typical stay</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Canc&uacute;n &amp; Riviera Maya</td><td class="fig">High</td><td class="fig">Very deep</td><td class="fig">5&ndash;7 nights</td><td><strong>Bundle</strong></td></tr>
+        <tr><td>Punta Cana</td><td class="fig">High</td><td class="fig">Very deep</td><td class="fig">7 nights</td><td><strong>Bundle</strong></td></tr>
+        <tr><td>Hawaii</td><td class="fig">High</td><td class="fig">Deep</td><td class="fig">7&ndash;10 nights</td><td><strong>Bundle</strong></td></tr>
+        <tr><td>Costa Rica</td><td class="fig">Medium</td><td class="fig">Thin outside resorts</td><td class="fig">8&ndash;12 nights</td><td>Book separately</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="cols2" style="margin-top:30px">
+      <div>
+        <h3>Why Costa Rica is different</h3>
+        <p>The properties worth staying in are mostly independent &mdash; small lodges, boutique hotels, eco-properties in places package sellers have no contracts with. Package inventory covers the Guanacaste resort corridor reasonably well and very little else.</p>
+        <p>The bigger issue is that a Costa Rica trip usually involves moving. Two nights in the cloud forest, three on the Pacific, a few in the Caribbean. That shape does not fit a product built around one flight and one hotel.</p>
+        <p>If your Costa Rica trip is genuinely a week at one Guanacaste resort, bundle it and the usual logic applies. For anything else, book the flight separately and the accommodation as you go.</p>
+      </div>
+      <div>
+        <h3>And why the other three work</h3>
+        <p>All three share the shape packages were designed around: expensive accommodation, a week or more in one place, deep contracted inventory, and a flight you would have taken anyway.</p>
+        <p>Hawaii adds a wrinkle worth flagging. Resort fees are widespread there and are charged at check-in rather than included, so they belong on both sides of any comparison. They do not usually change which option wins, but they change the trip budget.</p>
+        <p>The rule remains what it is everywhere: compare the package against booking the two halves separately, every time, before paying. That takes four minutes and the <a href="https://flighthotelpackage.com/">calculator does the arithmetic</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-soft" id="faq">
+  <div class="wrap">
+    <div class="cols2">
+      <div>
+        <span class="eyebrow">Questions</span>
+        <h2>Where, when, and whether to bundle.</h2>
+        <p>Twelve questions on seasonality, risk and destination choice, with sources named where figures come from third parties.</p>
+        <p>Then go deeper: <a href="/cancun-flight-and-hotel/">Canc&uacute;n</a>, <a href="/punta-cana-flight-and-hotel/">Punta Cana</a>, <a href="/hawaii-flight-and-hotel/">Hawaii</a>, <a href="/costa-rica-flight-and-hotel/">Costa Rica</a>.</p>
+        <div style="margin-top:34px"><div class="bnwrap bn-wide-skyscraper"><span class="bn-label">Advertisement</span><div class="eg-affiliate-banners" data-program="us-expedia" data-network="pz" data-layout="wide-skyscraper" data-image="resort" data-message="find-perfect-getaway-package" data-camref="1100l5QSrc" data-pubref="bhf-home-sky" data-link="packages"></div></div></div>
+      </div>
+      <div>
+        <details><summary>When is the cheapest time to book a Caribbean beach holiday?</summary><div class="ans"><p>June through October, because that is Atlantic hurricane season. Canc&amp;uacute;n hotel rates fall 40 to 60% in that window and Punta Cana&#x27;s fall 30 to 50%. The trade-off is real but frequently overstated: the Atlantic season runs 1 June to 30 November with peak risk mid-August through mid-October, September being the highest-risk month. June and late November are quiet despite technically being in season.</p></div></details>
+        <details><summary>How risky is hurricane season for a package holiday?</summary><div class="ans"><p>Lower than the reputation, but not nothing. A direct hit on any single resort area in any given week is unlikely, and most days in hurricane season look like every other day there. What is more common than a hurricane is disruption &amp;mdash; a cancelled flight, a day of storms, a closed excursion. If you travel in that window, refundable bookings and travel insurance stop being optional extras and start being the point.</p></div></details>
+        <details><summary>What is the 2026 hurricane forecast?</summary><div class="ans"><p>Near-normal to below-normal. Early 2026 forecasts from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico&#x27;s national meteorological service converged on 11 to 15 named storms and 4 to 7 hurricanes, against 30-year averages of 14 and 7. Seasonal forecasts describe probability across a whole basin over six months, not what will happen where you are going in your particular week.</p></div></details>
+        <details><summary>What is sargassum and does it affect my holiday?</summary><div class="ans"><p>A brown seaweed that washes onto Caribbean beaches, most heavily on Mexico&#x27;s Caribbean coast. It matters because it is the one seasonal problem that can genuinely ruin a beach holiday and the one no package seller mentions. Levels are typically lowest from December through March and heaviest from roughly May through September. Beachfront resorts clear their beaches daily, but the water can still be affected.</p></div></details>
+        <details><summary>Which month is best for Canc&amp;uacute;n?</summary><div class="ans"><p>January through early March, when the weather is dry and warm, sargassum is at its lowest and the ocean is clear. December is excellent too but carries a holiday price premium, and mid-March brings the biggest crowds of the year during spring break. June through September combines the heaviest sargassum with the highest hurricane risk, which is exactly why it is also the cheapest.</p></div></details>
+        <details><summary>When should I go to Costa Rica?</summary><div class="ans"><p>December through April for the Pacific side, which is the dry season and the reason most visitors go then. The green season from May to November brings afternoon rain rather than all-day rain, considerably lower prices and much greener landscapes, though September and October are the wettest months on the Pacific coast. The Caribbean side runs on a different pattern entirely and is often driest in September and October.</p></div></details>
+        <details><summary>Is Hawaii cheaper at certain times of year?</summary><div class="ans"><p>Yes, and the pattern is about demand rather than weather. April to mid-June and September through early December are the value windows, sitting between the winter escape season and the summer family season. Mid-December through March is expensive because it is when mainland winter is worst, and July and August are expensive because school is out. Weather varies far less across the year than price does.</p></div></details>
+        <details><summary>Should I book a flight and hotel together for these destinations?</summary><div class="ans"><p>For Canc&amp;uacute;n, Punta Cana and Hawaii, usually yes &amp;mdash; accommodation is the larger share of the trip cost, stays are typically a week or more, and all three have deep package inventory. For Costa Rica, usually no, because the properties most worth staying in are independent and frequently absent from package inventory. Compare the package against booking separately every time regardless.</p></div></details>
+        <details><summary>Which destination is best for a first all-inclusive holiday?</summary><div class="ans"><p>Punta Cana, on balance. All-inclusive density is higher there than almost anywhere, which means more competition, more choice at every price level, and a resort economy built entirely around the model. Canc&amp;uacute;n is a close second with a wider range of non-resort options if you want to leave the property, which some travellers value and others never use.</p></div></details>
+        <details><summary>How far ahead should I book these trips?</summary><div class="ans"><p>Three to five months for peak periods at all four, and longer for the Caribbean over the winter holidays, where demand concentrates on a handful of dates and popular resorts genuinely sell out. Outside peak periods, four to eight weeks works for domestic Hawaii routes and three to five months for the international destinations. Availability, not price, is the binding constraint in peak weeks.</p></div></details>
+        <details><summary>Do I need travel insurance for hurricane season?</summary><div class="ans"><p>It deserves serious thought in that window, more than at other times of year. The relevant questions are what your credit card already covers, whether the policy covers weather disruption specifically rather than only cancellation, and whether cover must be purchased before a storm is named. Many policies exclude storms that already exist when you buy. Read the actual terms rather than the summary.</p></div></details>
+        <details><summary>Is it better to fly into a closer airport or a cheaper one?</summary><div class="ans"><p>Compare the total, not the fare. A cheaper airport an hour further away costs you transfer time and money at both ends, and on a short trip that can be a meaningful share of the holiday. In Hawaii the question is more consequential than usual, because flying into the wrong island entirely means an additional inter-island flight.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:36px 0 54px;text-align:center">
+  <div class="wrap">
+    <p style="font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-bottom:14px">Picked your month?</p>
+    <a class="btn" href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Open Expedia &#8599;</a>
+    <p class="src" style="max-width:60ch;margin:18px auto 0">Affiliate link. We may earn a commission on qualifying bookings, at no extra cost to you.</p>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="/cancun-flight-and-hotel/">Canc&uacute;n &amp; Riviera Maya</a></li>
+          <li><a href="/punta-cana-flight-and-hotel/">Punta Cana</a></li>
+          <li><a href="/hawaii-flight-and-hotel/">Hawaii</a></li>
+          <li><a href="/costa-rica-flight-and-hotel/">Costa Rica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Book on Expedia</h4>
+        <ul>
+          <li><a href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Flights &amp; hotels &#8599;</a></li>
+          <li><a href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Vacation packages &#8599;</a></li>
+          <li><a href="https://expedia.com/affiliates/eyetoad/home" target="_blank" rel="sponsored noopener">Things to do &#8599;</a></li>
+        </ul>
+        <h4 style="margin-top:26px">Should you bundle?</h4>
+        <ul>
+          <li><a href="https://flighthotelpackage.com/">The bundle calculator</a></li>
+          <li><a href="https://flighthotelpackage.com/best-time-to-book-vacation-packages/">When to book</a></li>
+          <li><a href="https://howtosaveonvacations.com/">How to save on vacations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>On the ground</h4>
+        <ul>
+          <li><a href="https://cabaretebeachdominicanrepublic.com/">Cabarete, DR</a></li>
+          <li><a href="https://thingstodoinpuertoplata.com/">Puerto Plata</a></li>
+          <li><a href="https://bestbeacheshawaii.com/">Hawaii beaches</a></li>
+          <li><a href="https://bestdivinghawaii.com/">Diving in Hawaii</a></li>
+          <li><a href="https://bestbeachesincostarica.com/">Costa Rica beaches</a></li>
+          <li><a href="https://placestovisitincostarica.com/">Places in Costa Rica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Where to eat</h4>
+        <ul>
+          <li><a href="https://localfoodnearme.com/">Local Food Near Me</a></li>
+          <li><a href="https://cabareterestaurants.com/">Cabarete restaurants</a></li>
+          <li><a href="https://restauranthonolulu.com/">Honolulu restaurants</a></li>
+          <li><a href="https://puertoplatarestaurants.com/">Puerto Plata restaurants</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclose">Advertising disclosure: this site is a member of the Expedia Group affiliate programme. Search boxes, banners and booking links on these pages are affiliate placements, and we may earn a commission on qualifying bookings made through them, at no additional cost to you. Commission does not influence what we publish &mdash; several sections of this site tell you not to travel in the months that would earn us the most, and one destination page recommends booking separately rather than as a package. Prices, availability and fees are set by Expedia and its suppliers, not by us. Weather, hurricane and seasonality figures cited here come from named third-party sources and describe historical patterns and published forecasts, not guarantees. Always check current conditions and official guidance before you travel.</p>
+    <div class="fbase">
+      <span>&copy; 2026 BOOKHOTELANDFLIGHTS.COM</span>
+      <span>POWERED BY <a href="https://eyetoad.com/">EYETOAD.COM</a></span>
+    </div>
+  </div>
+</footer>
+<div class="sr-only"><h2>Fact sheet</h2><ul>
+<li>Atlantic hurricane season runs 1 June to 30 November, with peak risk mid-August to mid-October and the basin peaking around 10 September.</li>
+<li>Canc&uacute;n hotel rates fall roughly 40 to 60% during hurricane season; Punta Cana rates fall roughly 30 to 50% in its low season of May to November.</li>
+<li>2026 seasonal forecasts from CSU, AccuWeather, TSR, The Weather Channel, NCSU and Mexico's SMN predicted 11 to 15 named storms and 4 to 7 hurricanes, against 30-year averages of 14 and 7.</li>
+<li>Sargassum seaweed affects Mexico's Caribbean coast most heavily from roughly May to September and is lowest December to March.</li>
+<li>Cozumel is largely protected from sargassum; Punta Cana is generally less affected than Mexico's Caribbean coast.</li>
+<li>January to early March is the best overall window for Canc&uacute;n on weather, sargassum and ocean clarity together.</li>
+<li>Punta Cana's dry high season runs December to April; whale watching runs January to March.</li>
+<li>Costa Rica's Pacific dry season runs December to April; the Caribbean side follows a different pattern and is often driest in September and October.</li>
+<li>Hawaii's value windows are April to mid-June and September to early December; price varies far more than weather across the year.</li>
+<li>Bundling flights and hotels usually wins in Canc&uacute;n, Punta Cana and Hawaii, and usually loses in Costa Rica outside the Guanacaste resort corridor.</li>
+<li>Airport codes: Canc&uacute;n CUN, Punta Cana PUJ, Costa Rica SJO and LIR, Hawaii HNL, OGG, KOA and LIH.</li>
+</ul></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bookhotelandflights.com/#publisher","name":"Book Hotel And Flights","url":"https://bookhotelandflights.com/","parentOrganization":{"@type":"Organization","name":"Eye To Ad Media","url":"https://eyetoad.com/"}},{"@type":"WebSite","@id":"https://bookhotelandflights.com/#website","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights","description":"Destination-by-destination guidance on when to travel and whether to book flights and hotels together.","publisher":{"@id":"https://bookhotelandflights.com/#publisher"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://bookhotelandflights.com/#webpage","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights | Where to Go, and Exactly When","description":"Four destinations, month by month. Hurricane risk, sargassum, dry seasons and where hotel rates drop 40 to 60%. Search flights and hotels together, once you know when to go.","isPartOf":{"@id":"https://bookhotelandflights.com/#website"},"datePublished":"2026-08-11","dateModified":"2026-08-11","inLanguage":"en-US","speakable":{"@type":"SpeakableSpecification","cssSelector":[".aistrip p",".answer"]},"breadcrumb":{"@id":"https://bookhotelandflights.com/#crumb"},"mainEntity":{"@id":"https://bookhotelandflights.com/#list"},"about":[{"@type":"Thing","name":"Atlantic hurricane season","sameAs":"https://en.wikipedia.org/wiki/Atlantic_hurricane_season"},{"@type":"Thing","name":"Sargassum","sameAs":"https://en.wikipedia.org/wiki/Sargassum"},{"@type":"Thing","name":"Package tour","sameAs":"https://en.wikipedia.org/wiki/Package_tour"}]},{"@type":"BreadcrumbList","@id":"https://bookhotelandflights.com/#crumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Book Hotel And Flights","item":"https://bookhotelandflights.com/"}]},{"@type":"ItemList","@id":"https://bookhotelandflights.com/#list","name":"Destinations covered","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristDestination","name":"Cancún and Riviera Maya","url":"https://bookhotelandflights.com/cancun-flight-and-hotel/"}},{"@type":"ListItem","position":2,"item":{"@type":"TouristDestination","name":"Punta Cana","url":"https://bookhotelandflights.com/punta-cana-flight-and-hotel/"}},{"@type":"ListItem","position":3,"item":{"@type":"TouristDestination","name":"Hawaii","url":"https://bookhotelandflights.com/hawaii-flight-and-hotel/"}},{"@type":"ListItem","position":4,"item":{"@type":"TouristDestination","name":"Costa Rica","url":"https://bookhotelandflights.com/costa-rica-flight-and-hotel/"}}]},{"@type":"FAQPage","@id":"https://bookhotelandflights.com/#faq","mainEntity":[{"@type":"Question","name":"When is the cheapest time to book a Caribbean beach holiday?","acceptedAnswer":{"@type":"Answer","text":"June through October, because that is Atlantic hurricane season. Canc&uacute;n hotel rates fall 40 to 60% in that window and Punta Cana's fall 30 to 50%. The trade-off is real but frequently overstated: the Atlantic season runs 1 June to 30 November with peak risk mid-August through mid-October, September being the highest-risk month. June and late November are quiet despite technically being in season."}},{"@type":"Question","name":"How risky is hurricane season for a package holiday?","acceptedAnswer":{"@type":"Answer","text":"Lower than the reputation, but not nothing. A direct hit on any single resort area in any given week is unlikely, and most days in hurricane season look like every other day there. What is more common than a hurricane is disruption &mdash; a cancelled flight, a day of storms, a closed excursion. If you travel in that window, refundable bookings and travel insurance stop being optional extras and start being the point."}},{"@type":"Question","name":"What is the 2026 hurricane forecast?","acceptedAnswer":{"@type":"Answer","text":"Near-normal to below-normal. Early 2026 forecasts from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico's national meteorological service converged on 11 to 15 named storms and 4 to 7 hurricanes, against 30-year averages of 14 and 7. Seasonal forecasts describe probability across a whole basin over six months, not what will happen where you are going in your particular week."}},{"@type":"Question","name":"What is sargassum and does it affect my holiday?","acceptedAnswer":{"@type":"Answer","text":"A brown seaweed that washes onto Caribbean beaches, most heavily on Mexico's Caribbean coast. It matters because it is the one seasonal problem that can genuinely ruin a beach holiday and the one no package seller mentions. Levels are typically lowest from December through March and heaviest from roughly May through September. Beachfront resorts clear their beaches daily, but the water can still be affected."}},{"@type":"Question","name":"Which month is best for Canc&uacute;n?","acceptedAnswer":{"@type":"Answer","text":"January through early March, when the weather is dry and warm, sargassum is at its lowest and the ocean is clear. December is excellent too but carries a holiday price premium, and mid-March brings the biggest crowds of the year during spring break. June through September combines the heaviest sargassum with the highest hurricane risk, which is exactly why it is also the cheapest."}},{"@type":"Question","name":"When should I go to Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"December through April for the Pacific side, which is the dry season and the reason most visitors go then. The green season from May to November brings afternoon rain rather than all-day rain, considerably lower prices and much greener landscapes, though September and October are the wettest months on the Pacific coast. The Caribbean side runs on a different pattern entirely and is often driest in September and October."}},{"@type":"Question","name":"Is Hawaii cheaper at certain times of year?","acceptedAnswer":{"@type":"Answer","text":"Yes, and the pattern is about demand rather than weather. April to mid-June and September through early December are the value windows, sitting between the winter escape season and the summer family season. Mid-December through March is expensive because it is when mainland winter is worst, and July and August are expensive because school is out. Weather varies far less across the year than price does."}},{"@type":"Question","name":"Should I book a flight and hotel together for these destinations?","acceptedAnswer":{"@type":"Answer","text":"For Canc&uacute;n, Punta Cana and Hawaii, usually yes &mdash; accommodation is the larger share of the trip cost, stays are typically a week or more, and all three have deep package inventory. For Costa Rica, usually no, because the properties most worth staying in are independent and frequently absent from package inventory. Compare the package against booking separately every time regardless."}},{"@type":"Question","name":"Which destination is best for a first all-inclusive holiday?","acceptedAnswer":{"@type":"Answer","text":"Punta Cana, on balance. All-inclusive density is higher there than almost anywhere, which means more competition, more choice at every price level, and a resort economy built entirely around the model. Canc&uacute;n is a close second with a wider range of non-resort options if you want to leave the property, which some travellers value and others never use."}},{"@type":"Question","name":"How far ahead should I book these trips?","acceptedAnswer":{"@type":"Answer","text":"Three to five months for peak periods at all four, and longer for the Caribbean over the winter holidays, where demand concentrates on a handful of dates and popular resorts genuinely sell out. Outside peak periods, four to eight weeks works for domestic Hawaii routes and three to five months for the international destinations. Availability, not price, is the binding constraint in peak weeks."}},{"@type":"Question","name":"Do I need travel insurance for hurricane season?","acceptedAnswer":{"@type":"Answer","text":"It deserves serious thought in that window, more than at other times of year. The relevant questions are what your credit card already covers, whether the policy covers weather disruption specifically rather than only cancellation, and whether cover must be purchased before a storm is named. Many policies exclude storms that already exist when you buy. Read the actual terms rather than the summary."}},{"@type":"Question","name":"Is it better to fly into a closer airport or a cheaper one?","acceptedAnswer":{"@type":"Answer","text":"Compare the total, not the fare. A cheaper airport an hour further away costs you transfer time and money at both ends, and on a short trip that can be a meaningful share of the holiday. In Hawaii the question is more consequential than usual, because flying into the wrong island entirely means an additional inter-island flight."}}]}]}</script><script>
+function measureHeader(){var h=document.getElementById('hdr');
+  if(h){document.documentElement.style.setProperty('--hdr',h.getBoundingClientRect().height+'px');}}
+window.addEventListener('load',measureHeader);
+window.addEventListener('resize',measureHeader);
+measureHeader();
+var burger=document.getElementById('burger'),mobnav=document.getElementById('mobnav');
+burger.addEventListener('click',function(){
+  var open=mobnav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+  document.body.style.overflow=open?'hidden':'';
+  measureHeader();
+});
+mobnav.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){mobnav.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+});
+
+</script>
+<script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
+<script class="eg-affiliate-banners-script" src="https://creator.expediagroup.com/products/banners/assets/eg-affiliate-banners.js"></script>
+</body>
+</html>
