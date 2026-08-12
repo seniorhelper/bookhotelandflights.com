@@ -170,6 +170,29 @@ table.mx td{padding:0}
 .mx-scroll{font-family:var(--mono);font-size:.53rem;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(255,255,255,.5);margin-top:10px}
 
+.picker{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;color:var(--ocean)}
+.band .picker,.band .picker p,.band .picker label{color:var(--ocean)}
+.pk-head{background:var(--ocean);color:var(--white);padding:18px 24px;font-family:var(--disp);
+  font-weight:800;font-size:1.1rem;letter-spacing:-.03em}
+.band .pk-head{color:var(--white)}
+.pk-body{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pk-body label{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--grey);margin-bottom:7px}
+.pk-body select{width:100%;padding:12px 13px;border:1px solid var(--line);background:var(--shell);
+  font-family:var(--body);font-size:1rem;color:var(--ocean);border-radius:3px}
+.pk-body select:focus{border-color:var(--sun);outline:none;background:var(--white)}
+.pk-out{border-top:2px dashed var(--line);padding:22px 24px;background:var(--shell)}
+.pk-row{display:grid;grid-template-columns:34px minmax(0,1fr) 96px;gap:14px;align-items:center;
+  padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.pk-row:last-child{border-bottom:none}
+.pk-rank{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--grey);letter-spacing:-.04em}
+.pk-row.top .pk-rank{color:var(--palm)}
+.pk-name{font-family:var(--disp);font-weight:800;font-size:1.05rem;display:block;letter-spacing:-.025em}
+.pk-why{font-size:.88rem;color:var(--grey);display:block;margin-top:2px;line-height:1.5}
+.pk-tag{font-family:var(--mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 8px;border-radius:2px;text-align:center;white-space:nowrap}
+@media(max-width:768px){.pk-body{grid-template-columns:1fr}.pk-row{grid-template-columns:30px minmax(0,1fr)}.pk-tag{grid-column:2;justify-self:start;margin-top:5px}}
+
 /* destination cards */
 .dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
 .dcard{background:var(--white);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column}
@@ -329,6 +352,39 @@ footer li{margin-bottom:9px;line-height:1.4}
     </div>
   </div>
 </section>
+<section class="band-soft" id="picker">
+  <div class="wrap">
+    <span class="eyebrow">Answer the actual question</span>
+    <h2>You already know your month. Which destination should it be?</h2>
+    <p class="lede narrow">Most people cannot choose their travel dates &mdash; school terms and annual leave choose them. So the useful question is not &ldquo;when should I go&rdquo; but &ldquo;given that I am going in March, where is best?&rdquo;</p>
+
+    <div class="picker" style="margin-top:26px">
+      <div class="pk-head">Month picker</div>
+      <div class="pk-body">
+        <div>
+          <label for="pkm">When can you travel?</label>
+          <select id="pkm"><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select>
+        </div>
+        <div>
+          <label for="pkp">What matters most?</label>
+          <select id="pkp">
+            <option value="bal">A balance of everything</option>
+            <option value="cheap">The lowest price</option>
+            <option value="weather">The best weather</option>
+            <option value="quiet">The fewest crowds</option>
+            <option value="beach">A perfect beach</option>
+          </select>
+        </div>
+      </div>
+      <div class="pk-out" id="pkout"></div>
+    </div>
+
+    <div class="answer" style="margin-top:30px">
+      <span class="q">Where should I go on a beach holiday in September?</span>
+      <p>Hawaii, comfortably. September is the statistical peak of Atlantic hurricane season, which makes Canc&uacute;n and Punta Cana cheap but risky, and it is one of the wettest months on Costa Rica's Pacific coast. Hawaii has none of those problems and September is one of its two annual value windows, sitting between the summer family season and the winter escape season. It is the clearest case on the calendar where the cheapest option and the best option are different places.</p>
+    </div>
+  </div>
+</section>
 <div class="bnrow"><div class="wrap"><div class="bnwrap bn-medium-rectangle"><span class="bn-label">Advertisement</span><div class="eg-affiliate-banners" data-program="us-expedia" data-network="pz" data-layout="medium-rectangle" data-image="sailing" data-message="bye-bye-bucket-list-hello-adventure" data-camref="1100l5QSrc" data-pubref="bhf-home-rect" data-link="packages"></div><p class="bn-note">Links to Expedia vacation packages. We may earn a commission on qualifying bookings.</p></div></div></div>
 <section class="band-soft" id="hurricane">
   <div class="wrap">
@@ -429,6 +485,91 @@ footer li{margin-bottom:9px;line-height:1.4}
     </div>
   </div>
 </section>
+<section id="whopays">
+  <div class="wrap">
+    <span class="eyebrow">The trade, priced</span>
+    <h2>Who should take the cheap months, and who should not.</h2>
+    <p class="lede narrow">The 40 to 60% discount is real and the risk is real. Which one dominates depends less on the destination than on your own circumstances.</p>
+
+    <div class="cols2" style="margin-top:30px">
+      <div class="card win" style="margin-bottom:18px">
+        <span class="kv">Take the discount</span>
+        <h3>Flexible travellers with no fixed return</h3>
+        <p>If you can absorb a two-day delay without losing money or a job, hurricane season is close to free savings. The overwhelming majority of days in that window are ordinary, and the discount is paid to you whether or not the risk materialises.</p>
+        <p>The people who lose in this window are almost never the ones hit by a storm. They are the ones who could not absorb the disruption when it came.</p>
+      </div>
+      <div class="card lose" style="margin-bottom:18px">
+        <span class="kv">Pay for the good months</span>
+        <h3>Anyone travelling for a fixed event</h3>
+        <p>A wedding, an anniversary, a milestone birthday, a trip built around one specific day. The cost of that day going wrong is not measured in money, and no discount compensates for it.</p>
+        <p>The same applies to a first holiday together, a honeymoon, or the one week of annual leave a year that has to be worth it. Buy the certainty.</p>
+      </div>
+      <div class="card win" style="margin-bottom:18px">
+        <span class="kv">Take the discount, carefully</span>
+        <h3>Repeat visitors who know the destination</h3>
+        <p>If you have been before, you know what the resort is like in rain, whether the town is walkable when the beach is unusable, and what there is to do indoors. That knowledge converts a risk into an inconvenience.</p>
+        <p>First-time visitors have none of that, which is why the same weather produces a ruined holiday for one traveller and a quiet week for another.</p>
+      </div>
+      <div class="card lose">
+        <span class="kv">Pay for the good months</span>
+        <h3>Families with school-age children</h3>
+        <p>An awkward group, because school holidays force you into July and August, which are the worst weeks in the Caribbean and the most expensive in Hawaii simultaneously.</p>
+        <p>If you are locked into summer, the honest answer is that Hawaii and Costa Rica handle those months considerably better than Canc&uacute;n and Punta Cana do. That is exactly the kind of substitution the picker above is built to surface.</p>
+      </div>
+    </div>
+
+    <div class="answer" style="margin-top:32px">
+      <span class="q">Is it worth booking during hurricane season to save money?</span>
+      <p>It depends far more on your flexibility than on the destination. If you can absorb a delayed flight or two indoor days without real cost, the 40 to 60% saving at Canc&uacute;n or 30 to 50% at Punta Cana is a good bet, because most hurricane-season days are entirely ordinary. If the trip is built around a fixed event, or it is the one week of leave you get each year, pay for the reliable months instead. The risk is small but the downside is concentrated.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="mistakes">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Where destination trips go wrong</span>
+    <h2>Five mistakes that have nothing to do with price.</h2>
+
+    <div class="cols3" style="margin-top:30px">
+      <div class="card">
+        <span class="kv">One</span>
+        <h3>Booking the country, not the region</h3>
+        <p>Costa Rica is the worst offender. The Pacific and Caribbean coasts run on opposite weather patterns &mdash; September is the wettest month on one side and among the best on the other. &ldquo;Costa Rica in September&rdquo; has no single answer.</p>
+        <p>Hawaii has the same problem across four islands, and Mexico's Caribbean coast varies between Canc&uacute;n, Playa del Carmen and Tulum in ways a single package price hides.</p>
+      </div>
+      <div class="card">
+        <span class="kv">Two</span>
+        <h3>Assuming the resort photos are current</h3>
+        <p>Beach photography is shot in the best conditions of the year and used all twelve months. A property photographed in February looks identical in its marketing in July, when the beach may be under a foot of seaweed.</p>
+        <p>Recent guest photographs are a far better guide than the property's own gallery, and they are usually organised by date.</p>
+      </div>
+      <div class="card">
+        <span class="kv">Three</span>
+        <h3>Ignoring the transfer</h3>
+        <p>Riviera Maya properties can be two hours from Canc&uacute;n airport. Guanacaste is four to five hours from San Jos&eacute;. A package showing a cheap fare into the wrong airport is not cheap once you have paid for the drive twice.</p>
+        <p>Check the actual distance from the airport to the property before comparing anything.</p>
+      </div>
+      <div class="card">
+        <span class="kv">Four</span>
+        <h3>Booking a week somewhere that needs three days</h3>
+        <p>Some destinations reward a full week in one place. Others reward moving. Costa Rica in particular tends to disappoint people who book one resort for ten nights, because the interesting parts are spread across the country.</p>
+        <p>Match the trip shape to the destination rather than to the package that happened to be discounted.</p>
+      </div>
+      <div class="card">
+        <span class="kv">Five</span>
+        <h3>Treating the low season as one thing</h3>
+        <p>June and September are both technically hurricane season and are not remotely equivalent. June carries low risk and good conditions at low-season prices; September is the statistical peak. October offers most of September's pricing at materially lower risk.</p>
+        <p>The month matters. &ldquo;Low season&rdquo; is a pricing label, not a weather forecast.</p>
+      </div>
+      <div class="card">
+        <span class="kv">And one that is not a mistake</span>
+        <h3>Going anyway</h3>
+        <p>Plenty of excellent holidays happen in the months this page marks orange. The point is not to avoid them &mdash; it is to know what you are buying, so that a wet afternoon is something you priced rather than something that ambushed you.</p>
+        <p>An informed traveller in September usually has a better week than an uninformed one in February.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="wgwrap light">
   <div class="wg">
     <span class="wg-label">Flights only</span><h2 class="wg-h">Pricing the flight on its own?</h2>
@@ -471,6 +612,30 @@ footer li{margin-bottom:9px;line-height:1.4}
   </div>
 </section>
 
+<section id="method">
+  <div class="wrap">
+    <span class="eyebrow">Method</span>
+    <h2>Where these judgements come from.</h2>
+    <div class="cols2">
+      <div>
+        <h3>What is sourced</h3>
+        <p><strong>Hurricane season dates and peak timing</strong> follow the published Atlantic season calendar: 1 June to 30 November, peaking around 10 September.</p>
+        <p><strong>The 2026 storm forecast range</strong> is the published consensus from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico's national meteorological service &mdash; 11 to 15 named storms and 4 to 7 hurricanes.</p>
+        <p><strong>The discount figures</strong> &mdash; 40 to 60% at Canc&uacute;n, 30 to 50% at Punta Cana &mdash; are reported in 2026 destination guides covering low-season pricing.</p>
+        <p><strong>Seasonal patterns</strong> for sargassum, dry and green seasons, and Hawaii's price windows come from published month-by-month destination guidance.</p>
+        <p><strong>Airport codes and flight times</strong> are standard references; durations are approximate non-stop times and vary by carrier and season.</p>
+      </div>
+      <div>
+        <h3>What is judgement</h3>
+        <p><strong>The matrix colours and the picker scores are ours.</strong> They translate published seasonal patterns onto a comparable scale so four destinations can be ranked against one another, which no single source does. The inputs are sourced; the scoring is editorial and we would rather say so than imply a precision we do not have.</p>
+        <p><strong>We have not run a pricing study.</strong> No fare tracking, no rate dataset, no proprietary numbers. Where a figure appears, it belongs to someone else and is attributed.</p>
+        <p><strong>Averages hide a great deal.</strong> Sargassum arrival varies enormously year to year and beach to beach. A quiet hurricane season can still contain the one storm that lands on your week. Treat everything here as a planning position rather than a forecast.</p>
+        <p><strong>And we earn a commission when you book.</strong> Disclosed in the footer of every page &mdash; which is also why one of our four destination pages recommends not booking a package at all, and why this page tells you September is cheap for a reason.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="band-soft" id="faq">
   <div class="wrap">
     <div class="cols2">
@@ -493,6 +658,12 @@ footer li{margin-bottom:9px;line-height:1.4}
         <details><summary>Which destination is best for a first all-inclusive holiday?</summary><div class="ans"><p>Punta Cana, on balance. All-inclusive density is higher there than almost anywhere, which means more competition, more choice at every price level, and a resort economy built entirely around the model. Canc&amp;uacute;n is a close second with a wider range of non-resort options if you want to leave the property, which some travellers value and others never use.</p></div></details>
         <details><summary>How far ahead should I book these trips?</summary><div class="ans"><p>Three to five months for peak periods at all four, and longer for the Caribbean over the winter holidays, where demand concentrates on a handful of dates and popular resorts genuinely sell out. Outside peak periods, four to eight weeks works for domestic Hawaii routes and three to five months for the international destinations. Availability, not price, is the binding constraint in peak weeks.</p></div></details>
         <details><summary>Do I need travel insurance for hurricane season?</summary><div class="ans"><p>It deserves serious thought in that window, more than at other times of year. The relevant questions are what your credit card already covers, whether the policy covers weather disruption specifically rather than only cancellation, and whether cover must be purchased before a storm is named. Many policies exclude storms that already exist when you buy. Read the actual terms rather than the summary.</p></div></details>
+        <details><summary>What is the difference between low season and shoulder season?</summary><div class="ans"><p>Low season is when demand and prices are at their lowest, which at these Caribbean destinations means roughly June to October and is driven by hurricane risk and heat. Shoulder season sits either side of it &amp;mdash; late April to May, and November &amp;mdash; offering much of the low-season pricing with materially better conditions. Shoulder season is where most of the genuine value sits, and it is consistently underused because it has no marketing behind it.</p></div></details>
+        <details><summary>Do resorts close during hurricane season?</summary><div class="ans"><p>Most large Caribbean and Mexican resorts stay open year-round, unlike mountain and some European seasonal properties. What changes is service level: some restaurants may close, entertainment schedules thin out and renovation work is frequently scheduled for the quietest weeks. If a resort is undergoing works during your stay it is not usually disclosed prominently, so recent guest reviews from the same month are worth ten minutes.</p></div></details>
+        <details><summary>Which of these destinations is best for a first international trip?</summary><div class="ans"><p>Punta Cana or Canc&amp;uacute;n, for practical rather than scenic reasons. Both have short flights from most of the eastern United States, high concentrations of all-inclusive resorts where nothing has to be organised once you arrive, extensive English-speaking service, and transfers that are short and routine. Costa Rica rewards more confident travellers because moving around the country is part of the experience.</p></div></details>
+        <details><summary>How many nights should I book at each destination?</summary><div class="ans"><p>Five to seven for Canc&amp;uacute;n and Punta Cana, where the trip is fundamentally one resort and a beach. Seven to ten for Hawaii, because the flight is long enough that a short trip wastes a disproportionate share of it on travel. Eight to twelve for Costa Rica if you intend to see more than one region, which most visitors should, since the country&#x27;s appeal is in its variety rather than any single place.</p></div></details>
+        <details><summary>Are these destinations safe?</summary><div class="ans"><p>All four host very large numbers of visitors each year without incident, and resort areas in particular are heavily oriented toward visitor safety. The sensible approach is the same anywhere: read your own government&#x27;s current travel advisory for the specific region rather than the country as a whole, since advisories frequently distinguish between areas, and follow local guidance on beaches, currents and driving. Conditions change, so check close to travel rather than relying on anything published months earlier.</p></div></details>
+        <details><summary>Can I visit more than one of these on the same trip?</summary><div class="ans"><p>Rarely worth it. Canc&amp;uacute;n and Punta Cana are in different countries with no convenient direct routing, and Hawaii is a long flight from everywhere on this page. The one combination that genuinely works is multiple islands within Hawaii or multiple regions within Costa Rica, both of which are single-destination trips with internal variety. Packages handle single destinations well and multi-stop itineraries poorly.</p></div></details>
         <details><summary>Is it better to fly into a closer airport or a cheaper one?</summary><div class="ans"><p>Compare the total, not the fare. A cheaper airport an hour further away costs you transfer time and money at both ends, and on a short trip that can be a meaningful share of the holiday. In Hawaii the question is more consequential than usual, because flying into the wrong island entirely means an additional inter-island flight.</p></div></details>
       </div>
     </div>
@@ -573,7 +744,7 @@ footer li{margin-bottom:9px;line-height:1.4}
 <li>Bundling flights and hotels usually wins in Canc&uacute;n, Punta Cana and Hawaii, and usually loses in Costa Rica outside the Guanacaste resort corridor.</li>
 <li>Airport codes: Canc&uacute;n CUN, Punta Cana PUJ, Costa Rica SJO and LIR, Hawaii HNL, OGG, KOA and LIH.</li>
 </ul></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bookhotelandflights.com/#publisher","name":"Book Hotel And Flights","url":"https://bookhotelandflights.com/","parentOrganization":{"@type":"Organization","name":"Eye To Ad Media","url":"https://eyetoad.com/"}},{"@type":"WebSite","@id":"https://bookhotelandflights.com/#website","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights","description":"Destination-by-destination guidance on when to travel and whether to book flights and hotels together.","publisher":{"@id":"https://bookhotelandflights.com/#publisher"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://bookhotelandflights.com/#webpage","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights | Where to Go, and Exactly When","description":"Four destinations, month by month. Hurricane risk, sargassum, dry seasons and where hotel rates drop 40 to 60%. Search flights and hotels together, once you know when to go.","isPartOf":{"@id":"https://bookhotelandflights.com/#website"},"datePublished":"2026-08-11","dateModified":"2026-08-11","inLanguage":"en-US","speakable":{"@type":"SpeakableSpecification","cssSelector":[".aistrip p",".answer"]},"breadcrumb":{"@id":"https://bookhotelandflights.com/#crumb"},"mainEntity":{"@id":"https://bookhotelandflights.com/#list"},"about":[{"@type":"Thing","name":"Atlantic hurricane season","sameAs":"https://en.wikipedia.org/wiki/Atlantic_hurricane_season"},{"@type":"Thing","name":"Sargassum","sameAs":"https://en.wikipedia.org/wiki/Sargassum"},{"@type":"Thing","name":"Package tour","sameAs":"https://en.wikipedia.org/wiki/Package_tour"}]},{"@type":"BreadcrumbList","@id":"https://bookhotelandflights.com/#crumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Book Hotel And Flights","item":"https://bookhotelandflights.com/"}]},{"@type":"ItemList","@id":"https://bookhotelandflights.com/#list","name":"Destinations covered","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristDestination","name":"Cancún and Riviera Maya","url":"https://bookhotelandflights.com/cancun-flight-and-hotel/"}},{"@type":"ListItem","position":2,"item":{"@type":"TouristDestination","name":"Punta Cana","url":"https://bookhotelandflights.com/punta-cana-flight-and-hotel/"}},{"@type":"ListItem","position":3,"item":{"@type":"TouristDestination","name":"Hawaii","url":"https://bookhotelandflights.com/hawaii-flight-and-hotel/"}},{"@type":"ListItem","position":4,"item":{"@type":"TouristDestination","name":"Costa Rica","url":"https://bookhotelandflights.com/costa-rica-flight-and-hotel/"}}]},{"@type":"FAQPage","@id":"https://bookhotelandflights.com/#faq","mainEntity":[{"@type":"Question","name":"When is the cheapest time to book a Caribbean beach holiday?","acceptedAnswer":{"@type":"Answer","text":"June through October, because that is Atlantic hurricane season. Canc&uacute;n hotel rates fall 40 to 60% in that window and Punta Cana's fall 30 to 50%. The trade-off is real but frequently overstated: the Atlantic season runs 1 June to 30 November with peak risk mid-August through mid-October, September being the highest-risk month. June and late November are quiet despite technically being in season."}},{"@type":"Question","name":"How risky is hurricane season for a package holiday?","acceptedAnswer":{"@type":"Answer","text":"Lower than the reputation, but not nothing. A direct hit on any single resort area in any given week is unlikely, and most days in hurricane season look like every other day there. What is more common than a hurricane is disruption &mdash; a cancelled flight, a day of storms, a closed excursion. If you travel in that window, refundable bookings and travel insurance stop being optional extras and start being the point."}},{"@type":"Question","name":"What is the 2026 hurricane forecast?","acceptedAnswer":{"@type":"Answer","text":"Near-normal to below-normal. Early 2026 forecasts from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico's national meteorological service converged on 11 to 15 named storms and 4 to 7 hurricanes, against 30-year averages of 14 and 7. Seasonal forecasts describe probability across a whole basin over six months, not what will happen where you are going in your particular week."}},{"@type":"Question","name":"What is sargassum and does it affect my holiday?","acceptedAnswer":{"@type":"Answer","text":"A brown seaweed that washes onto Caribbean beaches, most heavily on Mexico's Caribbean coast. It matters because it is the one seasonal problem that can genuinely ruin a beach holiday and the one no package seller mentions. Levels are typically lowest from December through March and heaviest from roughly May through September. Beachfront resorts clear their beaches daily, but the water can still be affected."}},{"@type":"Question","name":"Which month is best for Canc&uacute;n?","acceptedAnswer":{"@type":"Answer","text":"January through early March, when the weather is dry and warm, sargassum is at its lowest and the ocean is clear. December is excellent too but carries a holiday price premium, and mid-March brings the biggest crowds of the year during spring break. June through September combines the heaviest sargassum with the highest hurricane risk, which is exactly why it is also the cheapest."}},{"@type":"Question","name":"When should I go to Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"December through April for the Pacific side, which is the dry season and the reason most visitors go then. The green season from May to November brings afternoon rain rather than all-day rain, considerably lower prices and much greener landscapes, though September and October are the wettest months on the Pacific coast. The Caribbean side runs on a different pattern entirely and is often driest in September and October."}},{"@type":"Question","name":"Is Hawaii cheaper at certain times of year?","acceptedAnswer":{"@type":"Answer","text":"Yes, and the pattern is about demand rather than weather. April to mid-June and September through early December are the value windows, sitting between the winter escape season and the summer family season. Mid-December through March is expensive because it is when mainland winter is worst, and July and August are expensive because school is out. Weather varies far less across the year than price does."}},{"@type":"Question","name":"Should I book a flight and hotel together for these destinations?","acceptedAnswer":{"@type":"Answer","text":"For Canc&uacute;n, Punta Cana and Hawaii, usually yes &mdash; accommodation is the larger share of the trip cost, stays are typically a week or more, and all three have deep package inventory. For Costa Rica, usually no, because the properties most worth staying in are independent and frequently absent from package inventory. Compare the package against booking separately every time regardless."}},{"@type":"Question","name":"Which destination is best for a first all-inclusive holiday?","acceptedAnswer":{"@type":"Answer","text":"Punta Cana, on balance. All-inclusive density is higher there than almost anywhere, which means more competition, more choice at every price level, and a resort economy built entirely around the model. Canc&uacute;n is a close second with a wider range of non-resort options if you want to leave the property, which some travellers value and others never use."}},{"@type":"Question","name":"How far ahead should I book these trips?","acceptedAnswer":{"@type":"Answer","text":"Three to five months for peak periods at all four, and longer for the Caribbean over the winter holidays, where demand concentrates on a handful of dates and popular resorts genuinely sell out. Outside peak periods, four to eight weeks works for domestic Hawaii routes and three to five months for the international destinations. Availability, not price, is the binding constraint in peak weeks."}},{"@type":"Question","name":"Do I need travel insurance for hurricane season?","acceptedAnswer":{"@type":"Answer","text":"It deserves serious thought in that window, more than at other times of year. The relevant questions are what your credit card already covers, whether the policy covers weather disruption specifically rather than only cancellation, and whether cover must be purchased before a storm is named. Many policies exclude storms that already exist when you buy. Read the actual terms rather than the summary."}},{"@type":"Question","name":"Is it better to fly into a closer airport or a cheaper one?","acceptedAnswer":{"@type":"Answer","text":"Compare the total, not the fare. A cheaper airport an hour further away costs you transfer time and money at both ends, and on a short trip that can be a meaningful share of the holiday. In Hawaii the question is more consequential than usual, because flying into the wrong island entirely means an additional inter-island flight."}}]}]}</script><script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bookhotelandflights.com/#publisher","name":"Book Hotel And Flights","url":"https://bookhotelandflights.com/","parentOrganization":{"@type":"Organization","name":"Eye To Ad Media","url":"https://eyetoad.com/"}},{"@type":"WebSite","@id":"https://bookhotelandflights.com/#website","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights","description":"Destination-by-destination guidance on when to travel and whether to book flights and hotels together.","publisher":{"@id":"https://bookhotelandflights.com/#publisher"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://bookhotelandflights.com/#webpage","url":"https://bookhotelandflights.com/","name":"Book Hotel And Flights | Where to Go, and Exactly When","description":"Four destinations, month by month. Hurricane risk, sargassum, dry seasons and where hotel rates drop 40 to 60%. Search flights and hotels together, once you know when to go.","isPartOf":{"@id":"https://bookhotelandflights.com/#website"},"datePublished":"2026-08-11","dateModified":"2026-08-11","inLanguage":"en-US","speakable":{"@type":"SpeakableSpecification","cssSelector":[".aistrip p",".answer"]},"breadcrumb":{"@id":"https://bookhotelandflights.com/#crumb"},"mainEntity":{"@id":"https://bookhotelandflights.com/#list"},"about":[{"@type":"Thing","name":"Atlantic hurricane season","sameAs":"https://en.wikipedia.org/wiki/Atlantic_hurricane_season"},{"@type":"Thing","name":"Sargassum","sameAs":"https://en.wikipedia.org/wiki/Sargassum"},{"@type":"Thing","name":"Package tour","sameAs":"https://en.wikipedia.org/wiki/Package_tour"}]},{"@type":"BreadcrumbList","@id":"https://bookhotelandflights.com/#crumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Book Hotel And Flights","item":"https://bookhotelandflights.com/"}]},{"@type":"ItemList","@id":"https://bookhotelandflights.com/#list","name":"Destinations covered","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristDestination","name":"Cancún and Riviera Maya","url":"https://bookhotelandflights.com/cancun-flight-and-hotel/"}},{"@type":"ListItem","position":2,"item":{"@type":"TouristDestination","name":"Punta Cana","url":"https://bookhotelandflights.com/punta-cana-flight-and-hotel/"}},{"@type":"ListItem","position":3,"item":{"@type":"TouristDestination","name":"Hawaii","url":"https://bookhotelandflights.com/hawaii-flight-and-hotel/"}},{"@type":"ListItem","position":4,"item":{"@type":"TouristDestination","name":"Costa Rica","url":"https://bookhotelandflights.com/costa-rica-flight-and-hotel/"}}]},{"@type":"SoftwareApplication","@id":"https://bookhotelandflights.com/#picker","name":"Destination Month Picker","applicationCategory":"TravelApplication","operatingSystem":"Any web browser","description":"Ranks four beach destinations for any month of the year against price, weather, crowds and beach conditions.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","@id":"https://bookhotelandflights.com/#faq","mainEntity":[{"@type":"Question","name":"When is the cheapest time to book a Caribbean beach holiday?","acceptedAnswer":{"@type":"Answer","text":"June through October, because that is Atlantic hurricane season. Canc&uacute;n hotel rates fall 40 to 60% in that window and Punta Cana's fall 30 to 50%. The trade-off is real but frequently overstated: the Atlantic season runs 1 June to 30 November with peak risk mid-August through mid-October, September being the highest-risk month. June and late November are quiet despite technically being in season."}},{"@type":"Question","name":"How risky is hurricane season for a package holiday?","acceptedAnswer":{"@type":"Answer","text":"Lower than the reputation, but not nothing. A direct hit on any single resort area in any given week is unlikely, and most days in hurricane season look like every other day there. What is more common than a hurricane is disruption &mdash; a cancelled flight, a day of storms, a closed excursion. If you travel in that window, refundable bookings and travel insurance stop being optional extras and start being the point."}},{"@type":"Question","name":"What is the 2026 hurricane forecast?","acceptedAnswer":{"@type":"Answer","text":"Near-normal to below-normal. Early 2026 forecasts from Colorado State University, AccuWeather, TSR, The Weather Channel, North Carolina State and Mexico's national meteorological service converged on 11 to 15 named storms and 4 to 7 hurricanes, against 30-year averages of 14 and 7. Seasonal forecasts describe probability across a whole basin over six months, not what will happen where you are going in your particular week."}},{"@type":"Question","name":"What is sargassum and does it affect my holiday?","acceptedAnswer":{"@type":"Answer","text":"A brown seaweed that washes onto Caribbean beaches, most heavily on Mexico's Caribbean coast. It matters because it is the one seasonal problem that can genuinely ruin a beach holiday and the one no package seller mentions. Levels are typically lowest from December through March and heaviest from roughly May through September. Beachfront resorts clear their beaches daily, but the water can still be affected."}},{"@type":"Question","name":"Which month is best for Canc&uacute;n?","acceptedAnswer":{"@type":"Answer","text":"January through early March, when the weather is dry and warm, sargassum is at its lowest and the ocean is clear. December is excellent too but carries a holiday price premium, and mid-March brings the biggest crowds of the year during spring break. June through September combines the heaviest sargassum with the highest hurricane risk, which is exactly why it is also the cheapest."}},{"@type":"Question","name":"When should I go to Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"December through April for the Pacific side, which is the dry season and the reason most visitors go then. The green season from May to November brings afternoon rain rather than all-day rain, considerably lower prices and much greener landscapes, though September and October are the wettest months on the Pacific coast. The Caribbean side runs on a different pattern entirely and is often driest in September and October."}},{"@type":"Question","name":"Is Hawaii cheaper at certain times of year?","acceptedAnswer":{"@type":"Answer","text":"Yes, and the pattern is about demand rather than weather. April to mid-June and September through early December are the value windows, sitting between the winter escape season and the summer family season. Mid-December through March is expensive because it is when mainland winter is worst, and July and August are expensive because school is out. Weather varies far less across the year than price does."}},{"@type":"Question","name":"Should I book a flight and hotel together for these destinations?","acceptedAnswer":{"@type":"Answer","text":"For Canc&uacute;n, Punta Cana and Hawaii, usually yes &mdash; accommodation is the larger share of the trip cost, stays are typically a week or more, and all three have deep package inventory. For Costa Rica, usually no, because the properties most worth staying in are independent and frequently absent from package inventory. Compare the package against booking separately every time regardless."}},{"@type":"Question","name":"Which destination is best for a first all-inclusive holiday?","acceptedAnswer":{"@type":"Answer","text":"Punta Cana, on balance. All-inclusive density is higher there than almost anywhere, which means more competition, more choice at every price level, and a resort economy built entirely around the model. Canc&uacute;n is a close second with a wider range of non-resort options if you want to leave the property, which some travellers value and others never use."}},{"@type":"Question","name":"How far ahead should I book these trips?","acceptedAnswer":{"@type":"Answer","text":"Three to five months for peak periods at all four, and longer for the Caribbean over the winter holidays, where demand concentrates on a handful of dates and popular resorts genuinely sell out. Outside peak periods, four to eight weeks works for domestic Hawaii routes and three to five months for the international destinations. Availability, not price, is the binding constraint in peak weeks."}},{"@type":"Question","name":"Do I need travel insurance for hurricane season?","acceptedAnswer":{"@type":"Answer","text":"It deserves serious thought in that window, more than at other times of year. The relevant questions are what your credit card already covers, whether the policy covers weather disruption specifically rather than only cancellation, and whether cover must be purchased before a storm is named. Many policies exclude storms that already exist when you buy. Read the actual terms rather than the summary."}},{"@type":"Question","name":"What is the difference between low season and shoulder season?","acceptedAnswer":{"@type":"Answer","text":"Low season is when demand and prices are at their lowest, which at these Caribbean destinations means roughly June to October and is driven by hurricane risk and heat. Shoulder season sits either side of it &mdash; late April to May, and November &mdash; offering much of the low-season pricing with materially better conditions. Shoulder season is where most of the genuine value sits, and it is consistently underused because it has no marketing behind it."}},{"@type":"Question","name":"Do resorts close during hurricane season?","acceptedAnswer":{"@type":"Answer","text":"Most large Caribbean and Mexican resorts stay open year-round, unlike mountain and some European seasonal properties. What changes is service level: some restaurants may close, entertainment schedules thin out and renovation work is frequently scheduled for the quietest weeks. If a resort is undergoing works during your stay it is not usually disclosed prominently, so recent guest reviews from the same month are worth ten minutes."}},{"@type":"Question","name":"Which of these destinations is best for a first international trip?","acceptedAnswer":{"@type":"Answer","text":"Punta Cana or Canc&uacute;n, for practical rather than scenic reasons. Both have short flights from most of the eastern United States, high concentrations of all-inclusive resorts where nothing has to be organised once you arrive, extensive English-speaking service, and transfers that are short and routine. Costa Rica rewards more confident travellers because moving around the country is part of the experience."}},{"@type":"Question","name":"How many nights should I book at each destination?","acceptedAnswer":{"@type":"Answer","text":"Five to seven for Canc&uacute;n and Punta Cana, where the trip is fundamentally one resort and a beach. Seven to ten for Hawaii, because the flight is long enough that a short trip wastes a disproportionate share of it on travel. Eight to twelve for Costa Rica if you intend to see more than one region, which most visitors should, since the country's appeal is in its variety rather than any single place."}},{"@type":"Question","name":"Are these destinations safe?","acceptedAnswer":{"@type":"Answer","text":"All four host very large numbers of visitors each year without incident, and resort areas in particular are heavily oriented toward visitor safety. The sensible approach is the same anywhere: read your own government's current travel advisory for the specific region rather than the country as a whole, since advisories frequently distinguish between areas, and follow local guidance on beaches, currents and driving. Conditions change, so check close to travel rather than relying on anything published months earlier."}},{"@type":"Question","name":"Can I visit more than one of these on the same trip?","acceptedAnswer":{"@type":"Answer","text":"Rarely worth it. Canc&uacute;n and Punta Cana are in different countries with no convenient direct routing, and Hawaii is a long flight from everywhere on this page. The one combination that genuinely works is multiple islands within Hawaii or multiple regions within Costa Rica, both of which are single-destination trips with internal variety. Packages handle single destinations well and multi-stop itineraries poorly."}},{"@type":"Question","name":"Is it better to fly into a closer airport or a cheaper one?","acceptedAnswer":{"@type":"Answer","text":"Compare the total, not the fare. A cheaper airport an hour further away costs you transfer time and money at both ends, and on a short trip that can be a meaningful share of the holiday. In Hawaii the question is more consequential than usual, because flying into the wrong island entirely means an additional inter-island flight."}}]}]}</script><script>
 function measureHeader(){var h=document.getElementById('hdr');
   if(h){document.documentElement.style.setProperty('--hdr',h.getBoundingClientRect().height+'px');}}
 window.addEventListener('load',measureHeader);
@@ -591,6 +762,45 @@ mobnav.addEventListener('click',function(e){
   if(e.target.tagName==='A'){mobnav.classList.remove('open');
     burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 });
+
+/* ---------- month picker ---------- */
+(function(){
+  var m=document.getElementById('pkm'); if(!m) return;
+  var pr=document.getElementById('pkp'), out=document.getElementById('pkout');
+  var D={"Cancún":{"price":[3,3,3,5,7,8,9,9,10,9,5,3],"weather":[10,10,9,8,7,6,5,5,3,5,9,9],"quiet":[4,4,2,6,7,7,5,5,8,8,7,4],"beach":[10,10,9,7,4,3,3,3,3,5,9,9],"why":["Dry, warm, clearest water of the year","Arguably the single best month","Excellent, but spring break brings the biggest crowds","Warm and quieter, seaweed starting","Sargassum builds; prices begin dropping","Whale sharks arrive; seaweed and humidity rise","Hot, humid, heaviest seaweed of the year","Peak sargassum meets rising storm risk","Cheapest month, and the statistical peak of hurricane season","Low-season pricing with lower storm risk than September","Dry season returns and crowds have not","Excellent weather at holiday prices"]},"Punta Cana":{"price":[3,3,4,4,7,8,9,9,10,9,6,3],"weather":[10,10,10,9,7,7,6,5,4,5,8,9],"quiet":[3,3,4,5,7,7,7,6,8,8,7,3],"beach":[9,10,10,9,8,8,7,6,5,6,8,9],"why":["Dry season, calm water, peak conditions","Whale watching season and clear skies","Whale season continues; still dry","End of the dry season, still excellent","Rain arrives in afternoons; rates drop 30 to 50%","Quiet and cheap, better weather than the label suggests","Hurricane season proper, though less exposed than most of the Caribbean","Warm, wet, cheap, and inside the risk window","Lowest prices of the year, highest storm probability","Still low season; risk easing toward month end","Shoulder season, improving weather, reasonable prices","Dry season begins again, holiday premium applies"]},"Hawaii":{"price":[3,4,5,8,8,5,3,3,8,8,7,2],"weather":[7,8,8,9,9,9,9,9,9,8,7,7],"quiet":[3,5,5,7,7,5,2,2,8,8,6,2],"beach":[7,8,8,9,9,9,9,9,9,8,7,7],"why":["Winter escape season; expensive and busy","Whale season; still peak pricing","Whales and spring break; prices holding high","One of two annual value windows","Excellent value before the summer rush","Good weather, prices climbing toward summer","School holidays; among the most expensive weeks","Peak family season, peak pricing","The best value month of the year here","Quiet, warm, and still good value","Value holds until the holiday surge begins","Holiday premium; the most expensive weeks"]},"Costa Rica":{"price":[3,4,4,5,7,7,6,7,9,9,7,3],"weather":[10,10,10,8,7,6,7,6,3,3,7,8],"quiet":[3,4,4,6,7,7,5,7,9,9,7,3],"beach":[9,10,9,8,6,6,6,5,3,3,6,8],"why":["Peak dry season on the Pacific; the classic window","Dry, sunny, and busy","Still dry; the last of the high season","Dry season ending, crowds thinning","Green season begins; afternoon rain, lower prices","Lush, quiet and good value","The veranillo, a drier spell inside the green season","Green and quiet; rain returns in earnest","Wettest month on the Pacific; many businesses close","Wet on the Pacific, but often the Caribbean side's best","Rain easing, prices still low, landscape at its greenest","Dry season returns with holiday pricing"]}};
+  var W={bal:{price:1,weather:1,quiet:1,beach:1},
+         cheap:{price:3,weather:.6,quiet:.6,beach:.4},
+         weather:{price:.4,weather:3,quiet:.5,beach:1},
+         quiet:{price:.9,weather:1,quiet:3,beach:.6},
+         beach:{price:.5,weather:1.4,quiet:.6,beach:3}};
+  var URL={"Cancún":"/cancun-flight-and-hotel/","Punta Cana":"/punta-cana-flight-and-hotel/",
+           "Hawaii":"/hawaii-flight-and-hotel/","Costa Rica":"/costa-rica-flight-and-hotel/"};
+  function esc(x){return String(x).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function run(){
+    var i=+m.value, p=pr.value, w=W[p];
+    var rows=Object.keys(D).map(function(k){
+      var d=D[k];
+      var sc=(d.price[i]*w.price + d.weather[i]*w.weather + d.quiet[i]*w.quiet + d.beach[i]*w.beach)
+             /(w.price+w.weather+w.quiet+w.beach);
+      return {name:k,score:sc,why:d.why[i],price:d.price[i],weather:d.weather[i]};
+    });
+    rows.sort(function(a,b){return b.score-a.score;});
+    out.innerHTML=rows.map(function(r,n){
+      var tag,cls;
+      if(r.score>=7.5){tag='Strong';cls='dv-yes';}
+      else if(r.score>=5.5){tag='Workable';cls='dv-mix';}
+      else {tag='Pick another month';cls='dv-no';}
+      return '<div class="pk-row'+(n===0?' top':'')+'"><span class="pk-rank">'+(n+1)+'</span>'+
+        '<span><a class="pk-name" href="'+URL[r.name]+'">'+esc(r.name)+'</a>'+
+        '<span class="pk-why">'+esc(r.why)+'</span></span>'+
+        '<span class="pk-tag '+cls+'">'+tag+'</span></div>';
+    }).join('');
+  }
+  m.addEventListener('change',run); pr.addEventListener('change',run);
+  m.value=String(new Date().getMonth());
+  run();
+})();
 
 </script>
 <script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
